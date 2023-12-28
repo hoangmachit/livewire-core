@@ -3,14 +3,14 @@
 
 <head>
     <title>{{ $title ?? 'Page Title' }}</title>
-    @include('partials.head')
+    @include('partials.admin.head')
 </head>
 
 <body>
     <main>
         {{ $slot }}
     </main>
-    @include('partials.js')
+    @include('partials.admin.js')
 </body>
 
 </html>

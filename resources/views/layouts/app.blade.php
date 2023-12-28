@@ -2,21 +2,20 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>{{ $title ?? 'Page Title' }}</title>
-    @include('partials.head')
+    @include('partials.admin.head')
 </head>
 
 <body>
-    @include('partials.nav')
-    @include('partials.sidebar')
+    @include('partials.admin.nav')
+    @include('partials.admin.sidebar')
     <main class="content">
-        @include('partials.nav-top')
-    {{ $slot }}
-    @include('partials.theme')
-    @include('partials.setting')
-    @include('partials.footer')
+        @include('partials.admin.nav-top')
+        {{ $slot }}
+        @include('partials.admin.theme')
+        @include('partials.admin.setting')
+        @include('partials.admin.footer')
     </main>
-    @include('partials.js')
+    @include('partials.admin.js')
 </body>
 
 </html>
