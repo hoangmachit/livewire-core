@@ -15,18 +15,29 @@
             </p>
             <div class="col-12 d-flex align-items-center justify-content-center">
                 <div class="signin-inner my-3 my-lg-0 bg-white shadow border-0 rounded p-4 p-lg-5 w-100 fmxw-500">
-                    <h1 class="h3">{{ __('admin.forgot_password.title') }}</h1>
+                    <h1 class="h3 text-center">{{ __('admin.forgot_password.title') }}</h1>
                     <p class="mb-4">{{ __('admin.forgot_password.desc') }}</p>
-                    <form action="#">
+                    <form wire:submit="recoverPassword" role="form" method="POST">
                         <div class="mb-4">
-                            <label for="email">Your Email</label>
+                            <label for="email">{{ __('admin.forgot_password.email') }}</label>
                             <div class="input-group">
-                                <input type="email" class="form-control" id="email" placeholder="john@company.com"
-                                    required autofocus>
+                                <input type="email" wire:model="email"
+                                    class="form-control @error('email') is-invalid @enderror" id="email"
+                                        autocomplete="off"
+                                    >
+                                @error('email')
+                                    <span class="invalid-feedback"> {{ $message }} </span>
+                                @enderror
                             </div>
                         </div>
+                        @if ($mailSentAlert)
+                            <div class="alert alert-success" role="alert">
+                                <small>An email containing the password reset link has been sent.</small>
+                            </div>
+                        @endif
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-gray-800">Recover password</button>
+                            <button type="submit"
+                                class="btn btn-gray-800">{{ __('admin.forgot_password.button') }}</button>
                         </div>
                     </form>
                 </div>

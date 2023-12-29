@@ -20,5 +20,5 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('forgot-password', ForgotPassword::class)->name('forgot_password');
     Route::get('locked', Locked::class)->name('locked');
     Route::get('register', Register::class)->name('register');
-    Route::get('reset-password', ResetPassword::class)->name('reset_password');
+    Route::get('reset-password/{id}', ResetPassword::class)->name('reset_password');
 });

@@ -44,7 +44,7 @@
                 </a>
             </li>
             <li class="nav-item  active ">
-                <a href="../../pages/dashboard/dashboard.html" class="nav-link">
+                <a href="" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -56,8 +56,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://demo.themesberg.com/volt-pro/pages/kanban.html" target="_blank"
-                    class="nav-link d-flex justify-content-between">
+                <a href="" target="_blank" class="nav-link d-flex justify-content-between">
                     <span>
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
@@ -75,7 +74,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a href="../../pages/transactions.html" class="nav-link">
+                <a href="" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +88,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a href="../../pages/settings.html" class="nav-link">
+                <a href="" class="nav-link">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -102,8 +101,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://demo.themesberg.com/volt-pro/pages/calendar.html" target="_blank"
-                    class="nav-link d-flex justify-content-between">
+                <a href="" target="_blank" class="nav-link d-flex justify-content-between">
                     <span>
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
@@ -121,8 +119,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://demo.themesberg.com/volt-pro/pages/map.html" target="_blank"
-                    class="nav-link d-flex justify-content-between">
+                <a href="" target="_blank" class="nav-link d-flex justify-content-between">
                     <span>
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
@@ -165,7 +162,7 @@
                 <div class="multi-level collapse " role="list" id="submenu-app" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="../../pages/tables/bootstrap-tables.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Bootstrap Tables</span>
                             </a>
                         </li>
@@ -199,37 +196,37 @@
                 <div class="multi-level collapse " role="list" id="submenu-pages" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../../pages/examples/sign-in.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Sign In</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../pages/examples/sign-up.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Sign Up</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../pages/examples/forgot-password.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Forgot password</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../pages/examples/reset-password.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Reset password</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../pages/examples/lock.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Lock</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../pages/examples/404.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">404 Not Found</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../../pages/examples/500.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">500 Not Found</span>
                             </a>
                         </li>
@@ -263,33 +260,32 @@
                 <div class="multi-level collapse " role="list" id="submenu-components" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item">
-                            <a class="nav-link" target="_blank"
-                                href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/accordions/">
+                            <a class="nav-link" target="_blank" href="">
                                 <span class="sidebar-text">All Components</span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="../../pages/components/buttons.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Buttons</span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="../../pages/components/notifications.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Notifications</span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="../../pages/components/forms.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Forms</span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="../../pages/components/modals.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Modals</span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="../../pages/components/typography.html">
+                            <a class="nav-link" href="">
                                 <span class="sidebar-text">Typography</span>
                             </a>
                         </li>
@@ -298,8 +294,7 @@
             </li>
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
             <li class="nav-item">
-                <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/"
-                    target="_blank" class="nav-link d-flex align-items-center">
+                <a href="" target="_blank" class="nav-link d-flex align-items-center">
                     <span class="sidebar-icon">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -313,16 +308,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <img src="{{ asset('assets/admin/image/themesberg.svg') }}" height="20" width="28"
-                            alt="Themesberg Logo">
-                    </span>
-                    <span class="sidebar-text">Themesberg</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="../../pages/upgrade-to-pro.html"
+                <a href=""
                     class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
                     <span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
                         <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
@@ -332,7 +318,7 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                     </span>
-                    <span>Upgrade to Pro</span>
+                    <span>Setting</span>
                 </a>
             </li>
         </ul>

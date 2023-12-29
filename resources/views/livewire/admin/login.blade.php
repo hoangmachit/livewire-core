@@ -20,11 +20,11 @@
                     <form wire:submit='login' class="mt-4">
                         @error('error')
                             <div class="alert alert-danger">
-                                <p class="m-0">{{ $message }} </p>
+                                <small>{{ $message }}</small>
                             </div>
                         @enderror
                         <div class="form-group mb-4">
-                            <label for="username">{{ __('admin.login.email') }}</label>
+                            <label for="username">{{ __('admin.login.username') }}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1">
                                     <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20"
