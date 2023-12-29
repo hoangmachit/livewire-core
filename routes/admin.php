@@ -6,11 +6,15 @@ use App\Http\Livewire\Admin\Locked;
 use App\Http\Livewire\Admin\Login;
 use App\Http\Livewire\Admin\Register;
 use App\Http\Livewire\Admin\ResetPassword;
+use App\Http\Livewire\Admin\User;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin.auth')->group(function () {
         Route::get('', Index::class)->name('index');
+        Route::prefix('user')->name('user.')->group(function () {
+            Route::get('', User::class)->name('index');
+        });
     });
 
     Route::middleware('admin.non.login')->group(function () {
