@@ -82,8 +82,8 @@
                 <div class="multi-level collapse " role="list" id="submenu-pages" aria-expanded="false">
                     <ul class="flex-column nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="">
-                                <span class="sidebar-text">Sign In</span>
+                            <a class="nav-link" wire:navigate href="{{ route('admin.product.index') }}">
+                                <span class="sidebar-text">Product</span>
                             </a>
                         </li>
                         <li class="nav-item">

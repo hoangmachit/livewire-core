@@ -10,7 +10,7 @@
                                 </path>
                             </svg></a></li>
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">User</li>
+                    <li class="breadcrumb-item active" aria-current="page">Products</li>
                 </ol>
             </nav>
         </div>
@@ -63,7 +63,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($users as $user)
+                @foreach ($products as $user)
                     <tr>
                         <td><a href="#" class="fw-bold">{{ $user->id }}</a></td>
                         <td><span class="fw-normal">{{ $user->name }}</span></td>
@@ -98,7 +98,7 @@
             </tbody>
         </table>
         <div class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-center">
-            {{ $users->links('partials.admin.bootstrap') }}
+            {{ $products->links('partials.admin.bootstrap') }}
         </div>
     </div>
 </div>

@@ -6,13 +6,12 @@ use App\Repositories\UserRepository;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class User extends Component
+class Product extends Component
 {
-
     use WithPagination;
     public function render(UserRepository $userRepository)
     {
-        $users = $userRepository->paginate(10);
-        return view('livewire.admin.user', compact('users'));
+        $products = $userRepository->paginate(10);
+        return view('livewire.admin.product', compact('products'));
     }
 }
