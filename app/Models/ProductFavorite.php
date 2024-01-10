@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class ProductFavorite extends Model
 {
     use HasFactory;
+
+     /**
+     * Summary of fillable
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'customer_id',
+        'product_id',
+    ];
 }

@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Size extends Model
 {
     use HasFactory;
+
+    /**
+     * Summary of fillable
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'sort',
+        'type',
+    ];
 }

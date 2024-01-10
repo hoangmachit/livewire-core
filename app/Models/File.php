@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class File extends Model
 {
     use HasFactory;
+
+    /**
+     * Summary of fillable
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'url',
+        'extension',
+        'size'
+    ];
 }

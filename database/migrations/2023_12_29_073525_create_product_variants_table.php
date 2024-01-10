@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('product_variants', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('color_id')->nullable()->constrained('colors');
+            $table->foreignId('size_id')->nullable()->constrained('sizes');
+            $table->string('type');
+            $table->integer('inventory')->default(1);
+            $table->integer('limit')->default(1);
+            $table->foreignId('file_id')->nullable()->constrained('files');
             $table->timestamps();
         });
     }

@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class ProductImage extends Model
 {
     use HasFactory;
+
+    /**
+     * Summary of fillable
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'product_id'
+    ];
 }

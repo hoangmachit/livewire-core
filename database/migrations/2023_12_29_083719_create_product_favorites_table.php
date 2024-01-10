@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('product_favorites', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')->constrained('products');
+            $table->foreignId('customer_id')->constrained('customers');
             $table->timestamps();
         });
     }

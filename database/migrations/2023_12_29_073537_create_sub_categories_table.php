@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('sub_categories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained('categories');
+            $table->string('name');
+            $table->string('slug');
+            $table->string('description')->nullable();
+            $table->text('content')->nullable();
+            $table->string('type');
+            $table->foreignId('file_id')->constrained('files');
+            $table->string('language')->default('vi');
             $table->timestamps();
         });
     }
