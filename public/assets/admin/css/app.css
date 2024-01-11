@@ -1,0 +1,20 @@
+.badge-blocked {
+    background: #ff0000;
+    border: 1px solid #ff0000;
+    color: #Fff;
+    border-radius: 3px;
+}
+
+.badge-published {
+    background: green;
+    border: 1px solid green;
+    color: #Fff;
+    border-radius: 3px;
+}
+
+.badge-privated {
+    background: #000;
+    border: 1px solid #000;
+    color: #Fff;
+    border-radius: 3px;
+}

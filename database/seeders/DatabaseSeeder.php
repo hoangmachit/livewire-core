@@ -12,6 +12,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call([
+            UserStatusSeeder::class,
+            ProductStatusSeeder::class,
+        ]);
         \App\Models\Admin::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@gmail.com',

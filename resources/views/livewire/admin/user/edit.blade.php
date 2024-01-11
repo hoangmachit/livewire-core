@@ -39,16 +39,7 @@
             </div>
         </div>
     </div>
-    @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
-    @if (session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
+    @include('partials.admin.alert')
     <div class="row">
         <div class="col-lg-12 col-sm-12">
             <form wire:submit="update">

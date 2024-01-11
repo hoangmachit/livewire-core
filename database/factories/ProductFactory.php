@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\ProductStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -23,6 +24,7 @@ class ProductFactory extends Factory
             'description' => fake()->text(255),
             'content' => fake()->text(500),
             'language' => 'vi',
+            'status_id' => ProductStatus::inRandomOrder()->first()->id,
         ];
     }
 }

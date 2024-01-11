@@ -18,13 +18,20 @@
     <div class="table-settings mb-4">
         <div class="row align-items-center justify-content-between">
             <div class="col col-md-6 col-lg-3 col-xl-4">
-                <div class="input-group me-2 me-lg-3 fmxw-400"><span class="input-group-text"><svg class="icon icon-xs"
-                            x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                clip-rule="evenodd"></path>
-                        </svg> </span><input type="text" class="form-control" placeholder="Search users"></div>
+                <form method="GET" role="form">
+                    <div class="input-group me-2 me-lg-3 fmxw-400">
+                        <span class="input-group-text"><svg class="icon icon-xs"
+                                x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                        <input type="text" value="{{ $search }}" class="form-control" name="search"
+                            placeholder="Bạn muốn tìm gì">
+                    </div>
+                </form>
             </div>
             <div class="col-12 col-md-6 col-xl-4 ps-md-0 text-end">
                 <a class="btn btn-primary" href="{{ route('admin.user.create') }}" wire:navigate>Create user</a>
@@ -52,7 +59,9 @@
                         <td><span class="fw-normal">{{ $user->email }}</span></td>
                         <td><span class="fw-normal">{{ $user->created_at->format('Y/m/d h:s') }}</span></td>
                         <td><span class="fw-normal">{{ $user->updated_at->format('Y/m/d h:s') }}</span></td>
-                        <td><span class="fw-normal text-success">Active</span></td>
+                        <td><span
+                                class="fw-normal badge badge-{{ strtolower($user->status->name) }}">{{ $user->status->name }}</span>
+                        </td>
                         <td>
                             <div class="btn-group">
                                 <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0"
@@ -71,8 +80,10 @@
                                         <span class="fas fa-eye me-2"></span>
                                         Edit
                                     </a>
-                                    <a class="dropdown-item text-danger rounded-bottom" href="#"><span
-                                            class="fas fa-trash-alt me-2"></span>Remove</a>
+                                    <button class="dropdown-item text-danger rounded-bottom"
+                                        wire:click="delete({{ $user->id }})"
+                                        wire:confirm="Are you sure DELETE it?"><span
+                                            class="fas fa-trash-alt me-2"></span>Remove</button>
                                 </div>
                             </div>
                         </td>

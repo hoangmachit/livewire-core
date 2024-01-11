@@ -39,18 +39,26 @@
             </div>
         </div>
     </div>
-    <form action="">
+    <form wire:submit="save" role="form">
         <div class="row">
             <div class="col-lg-8 col-sm-12">
                 <div class="card border-0 shadow mb-2">
                     <div class="card-body">
                         <div class="mb-4">
                             <label for="textarea"><small>Description</small></label>
-                            <textarea class="form-control" placeholder="Enter your message..." id="textarea" rows="8"></textarea>
+                            <textarea class="form-control @error('description')is-invalid @enderror" wire:model="description"
+                                placeholder="Enter your message..." id="textarea" rows="8"></textarea>
+                            @error('description')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-4">
                             <label for="textarea"><small>Content</small></label>
-                            <textarea class="form-control" placeholder="Enter your message..." id="textarea" rows="16"></textarea>
+                            <textarea class="form-control @error('content')is-invalid @enderror" wire:model="content"
+                                placeholder="Enter your message..." id="textarea" rows="16"></textarea>
+                            @error('content')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -102,15 +110,27 @@
                     <div class="card-body">
                         <div class="mb-2">
                             <label for="seo_title">Title</label>
-                            <input type="text" class="form-control" id="seo_title" />
+                            <input type="text" wire:model="seo_title"
+                                class="form-control @error('seo_title')is-invalid @enderror" id="seo_title" />
+                            @error('seo_title')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-2">
                             <label for="seo_keyword">Keyword</label>
-                            <input type="text" class="form-control" id="seo_keyword" />
+                            <input type="text" wire:model="seo_keyword"
+                                class="form-control @error('seo_keyword')is-invalid @enderror" id="seo_keyword" />
+                            @error('seo_keyword')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-0">
                             <label for="textarea"><small>Description</small></label>
-                            <textarea class="form-control" id="textarea" rows="6"></textarea>
+                            <textarea class="form-control @error('seo_description')is-invalid @enderror" wire:model="seo_description"
+                                id="textarea" rows="6"></textarea>
+                            @error('seo_description')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -119,13 +139,18 @@
                 <div class="card border-0 shadow mb-4">
                     <div class="card-body">
                         <div class="m-0">
-                            <label for="status"><small>Status</small></label>
-                            <select class="form-select" id="status">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <label for="status_id"><small>Status</small></label>
+                            <select class="form-select @error('status_id')is-invalid @enderror" id="status_id"
+                                wire:model="status_id">
+                                <option value="0">Choice</option>
+                                @foreach ($status as $item)
+                                    <option @if ($item->id === $status_id) selected @endif
+                                        value="{{ $item->id }}">{{ $item->name }}</option>
+                                @endforeach
                             </select>
+                            @error('status_id')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -137,27 +162,40 @@
                         <div class="mb-2">
                             <label for="email"><small>Product category</small></label>
                             <input type="email" class="form-control" id="email" />
+                            @error('seo_title')
+                                {{ $message }}
+                            @enderror
                         </div>
                         <div class="mb-2">
                             <label for="email"><small>Product type</small></label>
-                            <input type="email" class="form-control" id="email" />
+                            <input type="email" value="{{ $type }}" class="form-control" id="text" name="type" />
+                            @error('seo_title')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-2">
                             <label for="email"><small>Vendor</small></label>
                             <input type="email" class="form-control" id="email" />
+                            @error('seo_title')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-2">
                             <label for="email"><small>Tags</small></label>
-                            <input type="email" class="form-control" id="email" />
+                            <input type="email"
+                                class="form-control @error('seo_title')is-invalid @endif" id="email" />
+                            @error('seo_tag')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 d-flex justify-content-end">
-                <button type="submit" class="btn btn-primary">Create</button>
-            </div>
-        </div>
+                            <div class="col-md-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </div>
+                        </div>
     </form>
 </div>
