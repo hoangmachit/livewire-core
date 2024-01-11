@@ -1,13 +1,16 @@
 <?php
 
-use App\Http\Livewire\Admin\ForgotPassword;
-use App\Http\Livewire\Admin\Index;
-use App\Http\Livewire\Admin\Locked;
-use App\Http\Livewire\Admin\Login;
-use App\Http\Livewire\Admin\Product;
-use App\Http\Livewire\Admin\Register;
-use App\Http\Livewire\Admin\ResetPassword;
-use App\Http\Livewire\Admin\User;
+use App\Livewire\Admin\ForgotPassword;
+use App\Livewire\Admin\Index;
+use App\Livewire\Admin\Locked;
+use App\Livewire\Admin\Login;
+use App\Livewire\Admin\Product\ProductCreate;
+use App\Livewire\Admin\Product\ProductIndex;
+use App\Livewire\Admin\Register;
+use App\Livewire\Admin\ResetPassword;
+use App\Livewire\Admin\User\UserCreate;
+use App\Livewire\Admin\User\UserEdit;
+use App\Livewire\Admin\User\UserIndex;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->name('admin.')->group(function () {
@@ -22,10 +25,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin.auth')->group(function () {
         Route::get('', Index::class)->name('index');
         Route::prefix('user')->name('user.')->group(function () {
-            Route::get('', User::class)->name('index');
+            Route::get('', UserIndex::class)->name('index');
+            Route::get('create', UserCreate::class)->name('create');
+            Route::get('edit/{user}', UserEdit::class)->name('edit');
         });
         Route::prefix('product')->name('product.')->group(function () {
-            Route::get('', Product::class)->name('index');
+            Route::get('', ProductIndex::class)->name('index');
+            Route::get('create', ProductCreate::class)->name('create');
         });
     });
 });

@@ -9,11 +9,13 @@
     @include('partials.admin.nav')
     @include('partials.admin.sidebar')
     <main class="content">
-        @include('partials.admin.nav-top')
-        {{ $slot }}
-        @include('partials.admin.theme')
-        @include('partials.admin.setting')
-        @include('partials.admin.footer')
+        <div class="container">
+            @include('partials.admin.nav-top')
+            {{ $slot }}
+            @include('partials.admin.theme')
+            @include('partials.admin.setting')
+            @include('partials.admin.footer')
+        </div>
     </main>
     @include('partials.admin.js')
 </body>

@@ -12,6 +12,7 @@ class ExtentionsServiceProvider extends ServiceProvider
     public function register(): void
     {
         include_once app_path('/Constant/constants.php');
+        include_once app_path('/Helper/helpers.php');
     }
 
     /**
